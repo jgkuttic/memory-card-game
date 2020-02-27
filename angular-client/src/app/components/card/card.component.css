@@ -1,0 +1,57 @@
+.deck {
+  width: auto;
+  min-height: auto;
+  background: linear-gradient(180deg, white, 0%, grey, 50%, black, 100%);
+  border-radius: 10px;
+  box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+  display: inline-block;
+  align-items: center;
+  margin: 40px 40px 40px 40px; 
+  font-size: 0px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  grid-gap: 0px;
+  padding: 0px;
+}
+
+.card {
+  width: calc(25% - 10px);
+  height: calc(33.333% - 10px);
+  margin: 10px 10px 10px;
+  perspective: 1000px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s;
+}
+
+.card.is-flipped {
+  transform: rotateY(-180deg);
+}
+
+.card.disabled {
+	pointer-events: none;
+	opacity: 0.9;
+}
+
+.card-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card-face-front {
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  position: absolute;
+  border-radius: 5px;
+  transform: rotateY(180deg);
+}
+
+
