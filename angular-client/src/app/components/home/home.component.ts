@@ -4,17 +4,20 @@ import { GameService } from '../../services/game.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
 
-  constructor(gameService: GameService) { }
+  game: GameService;
+  constructor(game: GameService) { 
+    this.game = game;
+  }
 
   ngOnInit(): void {
   }
 
   startNewGame(){
-    console.log("implement code to start new game");
+    this.game.startNewGame();
   }
 
 }

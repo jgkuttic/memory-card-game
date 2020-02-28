@@ -1,14 +1,8 @@
-<div class="deck">
-  <ul class="cards">
-    <li *ngFor="let card of cards" (click)="flipCard(card)" >
-      <div class="card" [ngClass]="{'is-flipped': card.faceup }" [ngClass]="{'disabled': card.disabled}"> 
-        <div class="card-face card-face-front">
-          <img [src]="card.front_image">
-        </div>
-        <div class="card-face card-face-back">
-          <img [src]="card.back_image">
-        </div>
-      </div> 
-    </li>
-  </ul>
-</div>
+<div class="card" [class.flipped]="card.faceup" (click)="game.flipCard(card)"> 
+  <div class="card-face card-face-front">
+    <img [src]="card.front_image">
+  </div>
+  <div class="card-face card-face-back">
+    <img [src]="card.back_image">
+  </div>
+</div> 

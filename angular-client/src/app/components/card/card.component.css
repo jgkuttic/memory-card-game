@@ -1,26 +1,6 @@
-.deck {
-  width: auto;
-  min-height: auto;
-  background: linear-gradient(180deg, white, 0%, grey, 50%, black, 100%);
-  border-radius: 10px;
-  box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
-  display: inline-block;
-  align-items: center;
-  margin: 40px 40px 40px 40px; 
-  font-size: 0px;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(4, 200px);
-  grid-gap: 0px;
-  padding: 0px;
-}
-
 .card {
-  width: calc(25% - 10px);
-  height: calc(33.333% - 10px);
-  margin: 10px 10px 10px;
+  width: calc(25% - 20px);
+  height: calc(33.333% - 20px);
   perspective: 1000px;
   position: relative;
   transform: scale(1);
@@ -28,7 +8,7 @@
   transition: transform .5s;
 }
 
-.card.is-flipped {
+.card.flipped {
   transform: rotateY(-180deg);
 }
 

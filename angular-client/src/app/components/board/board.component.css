@@ -1,0 +1,16 @@
+.board {
+    width: auto;
+    min-height: auto;
+    background: linear-gradient(180deg, white, 0%, grey, 50%, black, 100%);
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    grid-gap: 0px;
+    padding-top: 20px;
+    padding-right: 5px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    align-items: center;
+    font-size: 0px;
+  }
